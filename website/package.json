@@ -1,0 +1,14 @@
+{
+  "name": "meri-local-bazaar-website",
+  "version": "1.0.0",
+  "description": "Official website and APK download page for Meri Local Bazaar - Buy, Sell & Discover Locally.",
+  "main": "index.html",
+  "keywords": [
+    "meri-local-bazaar",
+    "apk-download",
+    "marketplace-landing-page",
+    "vercel"
+  ],
+  "author": "Meri Local Bazaar Team",
+  "license": "MIT"
+}

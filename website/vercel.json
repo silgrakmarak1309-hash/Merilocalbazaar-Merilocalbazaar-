@@ -1,0 +1,63 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/download",
+      "destination": "/meri_local_bazaar.apk",
+      "permanent": false
+    },
+    {
+      "source": "/apk",
+      "destination": "/meri_local_bazaar.apk",
+      "permanent": false
+    },
+    {
+      "source": "/app",
+      "destination": "/meri_local_bazaar.apk",
+      "permanent": false
+    },
+    {
+      "source": "/release",
+      "destination": "https://github.com/silgrakmarak1309-hash/Apna-Local-Bazaar-1/releases/tag/v1.0.0",
+      "permanent": false
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)\\.apk",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/vnd.android.package-archive"
+        },
+        {
+          "key": "Content-Disposition",
+          "value": "attachment; filename=\"meri_local_bazaar.apk\""
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    }
+  ]
+}
+
