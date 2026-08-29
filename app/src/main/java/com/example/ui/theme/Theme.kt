@@ -7,52 +7,51 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
-private val DarkColorScheme =
-  darkColorScheme(
+private val DarkColorScheme = darkColorScheme(
     primary = BazaarOrangeLight,
-    onPrimary = Slate900,
+    onPrimary = Color.White,
     primaryContainer = BazaarOrangeDark,
     onPrimaryContainer = Color.White,
-    secondary = BazaarTeal,
-    onSecondary = Color.White,
-    secondaryContainer = Slate800,
-    onSecondaryContainer = Slate100,
-    tertiary = BazaarGold,
-    background = Color(0xFF090D16),
-    surface = Slate900,
-    onBackground = Color(0xFFF1F5F9),
-    onSurface = Color(0xFFF1F5F9),
-    surfaceVariant = Slate800,
-    onSurfaceVariant = Slate400,
-    outline = Slate700
-  )
+    secondary = SaffronAmber,
+    onSecondary = NavyDark,
+    tertiary = EmeraldSuccess,
+    background = NavyDark,
+    surface = SlateCard,
+    surfaceVariant = Color(0xFF334155),
+    onBackground = Color.White,
+    onSurface = Color.White,
+    onSurfaceVariant = Color(0xFFCBD5E1),
+    outline = Color(0xFF475569)
+)
 
-private val LightColorScheme =
-  lightColorScheme(
+private val LightColorScheme = lightColorScheme(
     primary = BazaarOrange,
     onPrimary = Color.White,
-    primaryContainer = BazaarOrangeContainer,
-    onPrimaryContainer = OnBazaarOrangeContainer,
-    secondary = BazaarTeal,
+    primaryContainer = SaffronLight,
+    onPrimaryContainer = BazaarOrangeDark,
+    secondary = NavyDark,
     onSecondary = Color.White,
-    secondaryContainer = BazaarTealContainer,
-    onSecondaryContainer = BazaarTealDark,
-    tertiary = BazaarGold,
-    background = Slate50,
+    tertiary = EmeraldSuccess,
+    background = LightBackground,
     surface = Color.White,
-    onBackground = Slate900,
-    onSurface = Slate900,
-    surfaceVariant = Slate100,
-    onSurfaceVariant = Slate600,
-    outline = Slate200
-  )
+    surfaceVariant = LightSurface,
+    onBackground = TextPrimary,
+    onSurface = TextPrimary,
+    onSurfaceVariant = TextSecondary,
+    outline = SlateBorder
+)
 
 @Composable
 fun MyApplicationTheme(
-  darkTheme: Boolean = isSystemInDarkTheme(),
-  dynamicColor: Boolean = false,
-  content: @Composable () -> Unit,
+    darkTheme: Boolean = isSystemInDarkTheme(),
+    dynamicColor: Boolean = false, // Keep branded colors for high-trust consistent identity
+    content: @Composable () -> Unit
 ) {
-  val colorScheme = if (darkTheme) DarkColorScheme else LightColorScheme
-  MaterialTheme(colorScheme = colorScheme, typography = Typography, content = content)
+    val colorScheme = if (darkTheme) DarkColorScheme else LightColorScheme
+
+    MaterialTheme(
+        colorScheme = colorScheme,
+        typography = Typography,
+        content = content
+    )
 }

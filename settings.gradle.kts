@@ -22,6 +22,6 @@ dependencyResolutionManagement {
   }
 }
 
-rootProject.name = "Meri-Local-Bazaar-Website"
+rootProject.name = "Meri Local Bazaar"
 
 include(":app")

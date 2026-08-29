@@ -1,6 +1,6 @@
 {
   "name": "Meri Local Bazaar",
-  "description": "Official Android marketplace app for Meri Local Bazaar - Buy, Sell, Cabs & Discover Locally.",
+  "description": "Meri Local Bazaar - Apne Area Ka Digital Marketplace! Official app & APK download portal for local buying, selling, services, and jobs.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
